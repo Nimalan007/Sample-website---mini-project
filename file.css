@@ -1,0 +1,109 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+marquee {
+  font-size: 40px;
+  color: rgb(245, 254, 4);
+  font-size: 50px;
+  text-transform: uppercase;
+}
+.link {
+  width: 100%;
+  height: 10px;
+  display: flex;
+  background-color: transparent;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  border-bottom: 3%;
+  animation-name: one;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+@keyframes one {
+  0% {
+    transform: translatex(-100%);
+  }
+}
+.link a {
+  text-transform: uppercase;
+  padding: 15px;
+  color: rgb(6, 232, 97);
+  font-size: 29px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.link.main {
+  width: 50%;
+  padding: 20px;
+  margin-left: 3%;
+}
+.main h1 {
+  color: rgb(32, 219, 15);
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.link a:hover {
+  color: rgb(255, 0, 0);
+  font-size: 30px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: rgb(242, 234, 8);
+}
+.left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-left:3%;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.left .object {
+  width: 50%;
+  height: 80%;
+}
+.object p {
+  width: 50%;
+  text-transform: uppercase;
+  color: rgb(209, 196, 196);
+  font-size: 40px;
+  margin-bottom: 3%;
+}
+.left .right{
+  width: 50%;
+  text-transform: uppercase;
+  color: rgb(179, 255, 0);
+}
+.right h1{
+  width: 40%;
+  padding: 20px;
+}
+@media (min-aspect-ratio: 16/9) {
+  .video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video {
+    width: auto;
+    height: 100%;
+  }
+}
